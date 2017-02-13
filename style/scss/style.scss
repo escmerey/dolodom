@@ -175,8 +175,8 @@ input, textarea, button {
     }
     &__btn {
         display: flex;
+        width: 30px;
         height: 100%;
-        padding: 0 9px;
         cursor: pointer;
         user-select: none;
         line-height: 0.6;
@@ -1398,6 +1398,7 @@ input, textarea, button {
     background-size: cover;
     @media screen and (max-width: 998px) {
         background: #ffffff url('../images/advantages-bg.jpg') 48% 0 no-repeat;
+        background-size: cover;
     }
     @media screen and (max-width: 760px) {
         padding: 60px 0;
@@ -1588,6 +1589,10 @@ input, textarea, button {
             }
         }
     }
+    .rangeSlider {
+        margin: 620px;
+        margin: 15px 0 0 0;
+    }
     &__content {
         display: flex;
         padding: 20px;
@@ -1616,6 +1621,9 @@ input, textarea, button {
                         color: #353535;
                     }
                 }
+            }
+            .rangeSlider {
+                margin: 0;
             }
         }
     }
@@ -1652,8 +1660,11 @@ input, textarea, button {
             &:not(:nth-child(3n+2)) {
                 margin-right: 20px;
             }
-            @media screen and (max-width: 998px) {
+            @media screen and (max-width: 1170px) {
                 margin-right: 20px !important;
+            }
+            @media screen and (max-width: 998px) {
+                width: auto;
             }
         }
     }
@@ -1661,10 +1672,6 @@ input, textarea, button {
         display: flex;
         width: 100%;
         margin-bottom: 20px;
-    }
-    .rangeSlider {
-        margin: 620px;
-        margin: 15px 0 0 0;
     }
 }
 

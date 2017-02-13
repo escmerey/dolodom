@@ -400,8 +400,8 @@ input, textarea, button {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  width: 30px;
   height: 100%;
-  padding: 0 9px;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2014,6 +2014,8 @@ input, textarea, button {
 @media screen and (max-width: 998px) {
   .advantages {
     background: white url("../images/advantages-bg.jpg") 48% 0 no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
   }
 }
 @media screen and (max-width: 760px) {
@@ -2246,6 +2248,10 @@ input, textarea, button {
 .filter__caption p b {
   color: #454545;
 }
+.filter .rangeSlider {
+  margin: 620px;
+  margin: 15px 0 0 0;
+}
 .filter__content {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2286,6 +2292,9 @@ input, textarea, button {
 }
 .filter__content--price .sortby > div > span {
   color: #353535;
+}
+.filter__content--price .rangeSlider {
+  margin: 0;
 }
 .filter__left, .filter__right {
   width: 40.243%;
@@ -2337,9 +2346,14 @@ input, textarea, button {
 .filter__elem .checkbox:not(:nth-child(3n+2)) {
   margin-right: 20px;
 }
-@media screen and (max-width: 998px) {
+@media screen and (max-width: 1170px) {
   .filter__elem .checkbox {
     margin-right: 20px !important;
+  }
+}
+@media screen and (max-width: 998px) {
+  .filter__elem .checkbox {
+    width: auto;
   }
 }
 .filter__title {
@@ -2349,10 +2363,6 @@ input, textarea, button {
   display: flex;
   width: 100%;
   margin-bottom: 20px;
-}
-.filter .rangeSlider {
-  margin: 620px;
-  margin: 15px 0 0 0;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ basket ~~~~~~~~~~~~~~~~~~~~~~~~*/
