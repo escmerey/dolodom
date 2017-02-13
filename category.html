@@ -5,18 +5,11 @@
         <title>Document</title>
         <meta name="keywords" content="document" />
         <meta name="description" content="document" />
-        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <!-- Favicon -->
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />
-        <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png" />
-        <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png" />
-        <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
         <!-- Document stylesheet files -->
         <link rel="stylesheet" href="style/swiper.min.css"/>
         <link rel="stylesheet" href="style/nice-select.css"/>
@@ -25,6 +18,7 @@
         <!-- jQuery scripts -->
         <script type="text/javascript" src="js/jquery.js"></script>
         <script src="js/jquery-ui.min.js"></script>
+        <script src="js/jQueryUITouch.js"></script>
         <script src="js/jquery.nice-select.min.js"></script>
         <script src="js/swiper.jquery.min.js"></script>
         <script src="js/perfect-scrollbar.jquery.min.js"></script>
@@ -98,89 +92,93 @@
         <main class="main b-center">
         <div class="main__left sidebar">
             <div class="catalog">
-                <h4 class="h4"><img src="images/ico/bagage.png" alt="">Каталог</h4>
-                <div class="catalog__menu">
-                    <span class="catalog__title">Игрушки</span>
-                    <div class="catalog__box">
-                        <a href="#">Раскраски</a>
-                        <a href="#">Елочные украшения</a>
+                    <div class="hamb_aside">
+                        <span>Каталог</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 306 306"><path d="M94.35 0l-35.7 35.7L175.95 153 58.65 270.3l35.7 35.7 153-153"/></svg>
                     </div>
-                    <span class="catalog__title">Игрушки на подставке</span>
-                    <div class="catalog__box">
-                        <a href="#">Lorem ipsum.</a>
-                        <a href="#">Lorem ipsum.</a>
-                        <a href="#">Lorem ipsum.</a>
+                    <h4 class="h4"><img src="images/ico/bagage.png" alt="">Каталог</h4>
+                    <div class="catalog__menu">
+                        <span class="catalog__title">Игрушки</span>
+                        <div class="catalog__box">
+                            <a href="#">Раскраски</a>
+                            <a href="#">Елочные украшения</a>
+                        </div>
+                        <span class="catalog__title">Игрушки на подставке</span>
+                        <div class="catalog__box">
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                        </div>
+                        <span class="catalog__title">Кукольные домики</span>
+                        <div class="catalog__box">
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                        </div>
+                        <span class="catalog__title">Товары для творчества</span>
+                        <div class="catalog__box">
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                        </div>
+                        <span class="catalog__title">Топперы</span>
+                        <div class="catalog__box">
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                        </div>
+                        <span class="catalog__title">Разное</span>
+                        <div class="catalog__box">
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                        </div>
+                        <span class="catalog__title">Интерьерные слова</span>
+                        <div class="catalog__box">
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                        </div>
+                        <span class="catalog__title">Акриловая краска</span>
+                        <div class="catalog__box">
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                        </div>
+                        <span class="catalog__title">Палитра</span>
+                        <div class="catalog__box">
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                        </div>
+                        <span class="catalog__title">Вентиляционные решетки</span>
+                        <div class="catalog__box">
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                        </div>
+                        <span class="catalog__title">Брелки автомобильные</span>
+                        <div class="catalog__box">
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                        </div>
+                        <span class="catalog__title">Игрушки ростовые</span>
+                        <div class="catalog__box">
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                        </div>
+                        <span class="catalog__title">Открытки "деревянные"</span>
+                        <div class="catalog__box">
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                        </div>
                     </div>
-                    <span class="catalog__title">Кукольные домики</span>
-                    <div class="catalog__box">
-                        <a href="#">Lorem ipsum.</a>
-                        <a href="#">Lorem ipsum.</a>
-                        <a href="#">Lorem ipsum.</a>
-                    </div>
-                    <span class="catalog__title">Товары для творчества</span>
-                    <div class="catalog__box">
-                        <a href="#">Lorem ipsum.</a>
-                        <a href="#">Lorem ipsum.</a>
-                        <a href="#">Lorem ipsum.</a>
-                    </div>
-                    <span class="catalog__title">Топперы</span>
-                    <div class="catalog__box">
-                        <a href="#">Lorem ipsum.</a>
-                        <a href="#">Lorem ipsum.</a>
-                        <a href="#">Lorem ipsum.</a>
-                    </div>
-                    <span class="catalog__title">Разное</span>
-                    <div class="catalog__box">
-                        <a href="#">Lorem ipsum.</a>
-                        <a href="#">Lorem ipsum.</a>
-                        <a href="#">Lorem ipsum.</a>
-                    </div>
-                    <span class="catalog__title">Интерьерные слова</span>
-                    <div class="catalog__box">
-                        <a href="#">Lorem ipsum.</a>
-                        <a href="#">Lorem ipsum.</a>
-                        <a href="#">Lorem ipsum.</a>
-                    </div>
-                    <span class="catalog__title">Акриловая краска</span>
-                    <div class="catalog__box">
-                        <a href="#">Lorem ipsum.</a>
-                        <a href="#">Lorem ipsum.</a>
-                        <a href="#">Lorem ipsum.</a>
-                    </div>
-                    <span class="catalog__title">Палитра</span>
-                    <div class="catalog__box">
-                        <a href="#">Lorem ipsum.</a>
-                        <a href="#">Lorem ipsum.</a>
-                        <a href="#">Lorem ipsum.</a>
-                    </div>
-                    <span class="catalog__title">Вентиляционные решетки</span>
-                    <div class="catalog__box">
-                        <a href="#">Lorem ipsum.</a>
-                        <a href="#">Lorem ipsum.</a>
-                        <a href="#">Lorem ipsum.</a>
-                    </div>
-                    <span class="catalog__title">Брелки автомобильные</span>
-                    <div class="catalog__box">
-                        <a href="#">Lorem ipsum.</a>
-                        <a href="#">Lorem ipsum.</a>
-                        <a href="#">Lorem ipsum.</a>
-                    </div>
-                    <span class="catalog__title">Игрушки ростовые</span>
-                    <div class="catalog__box">
-                        <a href="#">Lorem ipsum.</a>
-                        <a href="#">Lorem ipsum.</a>
-                        <a href="#">Lorem ipsum.</a>
-                    </div>
-                    <span class="catalog__title">Открытки "деревянные"</span>
-                    <div class="catalog__box">
-                        <a href="#">Lorem ipsum.</a>
-                        <a href="#">Lorem ipsum.</a>
-                        <a href="#">Lorem ipsum.</a>
-                    </div>
+                    <a href="#">Организаторам СП</a>
+                    <a href="#">Блог</a>
                 </div>
-                <a href="#">Организаторам СП</a>
-                <a href="#">Блог</a>
-            </div>
             <div class="sidebar__slider swiper-container">
                 <div class="swiper-wrapper">
                     <div class="sidebar__slide swiper-slide">

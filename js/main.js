@@ -3,6 +3,12 @@
  */
 $(function() {
 
+    $(window).scroll(function(event) {
+        if ($('.catalog').length) {
+            hambVisible();
+        }
+    });
+
     $('a[href*=#].anchor').bind("click", function(e) {
         var anchor = $(this);
         $('html, body').stop().animate({
@@ -16,6 +22,24 @@ $(function() {
         $('html, body').stop().animate({
             scrollTop: $('.popular').offset().top
         }, 700);
+    });
+
+    // показать/скрыть .hamb_aside
+    function hambVisible() {
+        if ($(window).scrollTop() > $('.main').offset().top) {
+            $('.hamb_aside').addClass('visible');
+        }else{
+            $('.hamb_aside').removeClass('visible');
+        }
+        if ($(window).scrollTop() > $('.main').offset().top + $('.main').height()){
+            $('.hamb_aside').removeClass('visible');
+        }
+    }
+
+    //открыть боковое меню фильтра
+    $('.hamb_aside').on('click', function(event) {
+        $(this).parents('.catalog').addClass('open');
+        $('#overlay').addClass('visible')
     });
 
     // Добавляем маску к вводу телефона

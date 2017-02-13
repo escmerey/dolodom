@@ -2,6 +2,7 @@ $(function() {
 	
 	$('.popup_close, #overlay').on('click', function(event) {
 		$('.popup, #overlay').removeClass('visible');
+		$('.catalog').removeClass('open');
 	});
 
 	$(".callPopup").on('click', function(event) {

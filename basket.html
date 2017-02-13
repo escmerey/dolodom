@@ -5,18 +5,11 @@
         <title>Document</title>
         <meta name="keywords" content="document" />
         <meta name="description" content="document" />
-        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <!-- Favicon -->
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />
-        <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png" />
-        <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png" />
-        <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
         <!-- Document stylesheet files -->
         <link rel="stylesheet" href="style/swiper.min.css"/>
         <link rel="stylesheet" href="style/nice-select.css"/>
@@ -25,6 +18,7 @@
         <!-- jQuery scripts -->
         <script type="text/javascript" src="js/jquery.js"></script>
         <script src="js/jquery-ui.min.js"></script>
+        <script src="js/jQueryUITouch.js"></script>
         <script src="js/jquery.nice-select.min.js"></script>
         <script src="js/swiper.jquery.min.js"></script>
         <script src="js/perfect-scrollbar.jquery.min.js"></script>
@@ -101,6 +95,10 @@
         <main class="main b-center">
             <div class="main__left sidebar">
                 <div class="catalog">
+                    <div class="hamb_aside">
+                        <span>Каталог</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 306 306"><path d="M94.35 0l-35.7 35.7L175.95 153 58.65 270.3l35.7 35.7 153-153"/></svg>
+                    </div>
                     <h4 class="h4"><img src="images/ico/bagage.png" alt="">Каталог</h4>
                     <div class="catalog__menu">
                         <span class="catalog__title">Игрушки</span>
@@ -202,45 +200,45 @@
                             <th>стоимость</th>
                         </tr>
                         <tr>
-                            <td>
+                            <td data-title="Товар">
                                 <span class="goods__art">Артикул:КД-0000029</span>
                                 <p class="goods__name">Кукольный домик открытого типа</p>
                                 <img class="basket__image" src="images/goods/item-6.png" alt="">
                             </td>
-                            <td>
+                            <td data-title="Цена">
                                 <div class="goods__price">30.00</div>
                                 <a href="#" class="btn">индивидуалный заказ</a>
                             </td>
-                            <td>
+                            <td data-title="Количество">
                                 <div class="quantity">
                                     <div class="quantity__btn quantity__btn--minus">-</div>
                                     <input class="quantity__number" type="text" value="1">
                                     <div class="quantity__btn quantity__btn--plus">+</div>
                                 </div>
                             </td>
-                            <td>
+                            <td data-title="Стоимость">
                                 <div class="goods__price">30.00</div>
                                 <div class="remove"><img src="images/ico/remove.png" alt=""></div>
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td data-title="Товар">
                                 <span class="goods__art">Артикул:КД-0000029</span>
                                 <p class="goods__name">Кукольный домик открытого типа</p>
                                 <img class="basket__image" src="images/goods/item-6.png" alt="">
                             </td>
-                            <td>
+                            <td data-title="Цена">
                                 <div class="goods__price">30.00</div>
                                 <a href="#" class="btn">индивидуалный заказ</a>
                             </td>
-                            <td>
+                            <td data-title="Количество">
                                 <div class="quantity">
                                     <div class="quantity__btn quantity__btn--minus">-</div>
                                     <input class="quantity__number" type="text" value="1">
                                     <div class="quantity__btn quantity__btn--plus">+</div>
                                 </div>
                             </td>
-                            <td>
+                            <td data-title="Стоимость">
                                 <div class="goods__price">30.00</div>
                                 <div class="remove"><img src="images/ico/remove.png" alt=""></div>
                             </td>

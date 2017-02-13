@@ -14,7 +14,7 @@ html, body {
 }
 
 body {
-    min-width: 1200px;
+    // min-width: 1200px;
     font-family: 'SFUIDisplay';
     line-height: normal;
     color: #292929;
@@ -62,6 +62,9 @@ input, textarea, button {
         color: #4d4d4d;
         border: 1px solid transparent;
         border-radius: 100px;
+        @media screen and (max-width: 720px) {
+            margin-bottom: 5px;
+        }
         &:not(:last-child) {
             margin-right: 10px;
         }
@@ -115,7 +118,8 @@ input, textarea, button {
 
 .btn {
     display: inline-block;
-    width: 184px;
+    width: 100%;
+    max-width: 184px;
     height: 58px;
     transition: 0.2s all;
     text-align: center;
@@ -170,10 +174,15 @@ input, textarea, button {
         background: none;
     }
     &__btn {
+        display: flex;
+        height: 100%;
         padding: 0 9px;
         cursor: pointer;
         user-select: none;
         line-height: 0.6;
+
+        align-items: center;
+        justify-content: center;
         &:hover {
             text-shadow: 0 0 1px #606060;
         }
@@ -186,16 +195,68 @@ input, textarea, button {
     flex-wrap: wrap;
     &--quad {
         margin-left: -50px;
+        @media screen and (max-width: 1170px) {
+            margin-left: -20px;
+        }
+        @media screen and (max-width: 998px) {
+            margin-left: -15px;
+        }
+        @media screen and (max-width: 720px) {
+            margin-left: -10px;
+        }
+        @media screen and (max-width: 460px) {
+            margin: 0;
+        }
         .goods__item {
             width: calc(25% - 50px);
             margin: 0 0 50px 50px;
+            @media screen and (max-width: 1170px) {
+                width: calc(25% - 20px);
+                margin: 0 0 20px 20px;
+            }
+            @media screen and (max-width: 998px) {
+                width: calc(33.33% - 15px);
+                margin: 0 0 15px 15px;
+            }
+            @media screen and (max-width: 720px) {
+                width: calc(50% - 10px);
+                margin: 0 0 10px 10px;
+            }
+            @media screen and (max-width: 460px) {
+                width: 100%;
+                margin: 0 0 15px;
+            }
         }
     }
     &--triple {
         margin-left: -30px;
+        @media screen and (max-width: 1170px) {
+            margin-left: -20px;
+        }
+        @media screen and (max-width: 998px) {
+            margin-left: -10px;
+        }
+        @media screen and (max-width: 460px) {
+            margin: 0;
+        }
         .goods__item {
             width: calc(33.33% - 30px);
             margin: 0 0 62px 30px;
+            @media screen and (max-width: 1170px) {
+                width: calc(33.33% - 20px);
+                margin: 0 0 40px 20px;
+            }
+            @media screen and (max-width: 998px) {
+                width: calc(33.33% - 10px);
+                margin: 0 0 40px 10px;
+            }
+            @media screen and (max-width: 720px) {
+                width: calc(50% - 10px);
+            }
+            @media screen and (max-width: 460px) {
+                width: 100%;
+                margin: 0 0 20px 0;
+            }
         }
     }
     &__item {
@@ -208,17 +269,27 @@ input, textarea, button {
         align-items: center;
     }
     &__image {
+        display: flex;
         overflow: hidden;
+        width: 100%;
         height: 250px;
         margin-bottom: 19px;
         border: 1px solid #f5f4f2;
         border-radius: 3px;
         background-color: #ffffff;
+
+        justify-content: center;
+        align-items: center;
+        @media screen and (max-width: 460px) {
+            height: 200px;
+        }
         img {
             max-width: 100%;
+            max-height: 100%;
         }
     }
     &__art {
+        width: 100%;
         margin-bottom: 6px;
         text-transform: uppercase;
         font-size: 10px;
@@ -226,8 +297,12 @@ input, textarea, button {
         color: #8a8a8a;
     }
     &__name {
+        width: 100%;
         margin: 0 0 15px;
         line-height: 18px;
+        @media screen and (max-width: 460px) {
+            margin: 0 0 10px;
+        }
     }
     &__price {
         display: flex;
@@ -236,12 +311,20 @@ input, textarea, button {
         color: #fcb446;
 
         align-items: flex-start;
+        @media screen and (max-width: 720px) {
+            font-size: 22px;
+        }
         &:before {
             width: 14px;
             height: 24px;
             margin-right: 8px;
             content: '';
             background-image: url('../images/ico/ruble.png');
+            @media screen and (max-width: 720px) {
+                width: 12px;
+                height: 20px;
+                background-size: 100%;
+            }
         }
     }
     &__bottom {
@@ -250,11 +333,15 @@ input, textarea, button {
         margin: 19px 0 0 0;
 
         justify-content: space-between;
+        @media screen and (max-width: 460px) {
+            margin: 10px 0 0 0;
+        }
         a {
             display: block;
         }
     }
     &__addcart {
+        margin-right: 10px;
         transition: 0.2s all;
         &:hover {
             filter: contrast(150%);
@@ -265,6 +352,25 @@ input, textarea, button {
         top: 0;
         left: 0;
         transform: translate(-40%, -40%);
+        @media screen and (max-width: 998px) {
+            left: 10px;
+        }
+    }
+    .quantity {
+        @media screen and (max-width: 720px) {
+            width: 75px;
+        }
+        &__btn {
+            @media screen and (max-width: 720px) {
+                padding: 0 6px;
+            }
+        }
+        &__number {
+            @media screen and (max-width: 720px) {
+                width: 20px;
+                font-size: 16px;
+            }
+        }
     }
 }
 
@@ -467,19 +573,27 @@ input, textarea, button {
     overflow: visible;
     padding: 25px 0;
     background-color: #f5f4f2;
+    @media screen and (max-width: 720px) {
+        padding: 15px 0;
+    }
     .b-center {
         display: flex;
 
         flex-wrap: wrap;
         align-items: center;
+        @media screen and (max-width: 720px) {
+            justify-content: center;
+        }
     }
     &__logo {
         display: flex;
 
         align-items: center;
+        @media screen and (max-width: 998px) {
+        }
         span {
             max-width: 100px;
-            margin-left: 5px;
+            margin-left: 8px;
             text-transform: uppercase;
             font-size: 9px;
             font-weight: 500;
@@ -489,10 +603,25 @@ input, textarea, button {
     }
     &__menu {
         margin-left: auto;
+        @media screen and (max-width: 720px) {
+            display: flex;
+            width: 100%;
+            margin: 20px 0 0 0;
+
+            justify-content: center;
+            flex-wrap: wrap;
+        }
     }
     &__search {
         position: relative;
         margin: 0 0 0 6.84%;
+        @media screen and (max-width: 1170px) {
+            margin: 0 0 0 4%;
+        }
+        @media screen and (max-width: 998px) {
+            width: 53%;
+            margin: 20px 0 0 0;
+        }
         input {
             box-sizing: border-box;
             width: 136px;
@@ -503,6 +632,9 @@ input, textarea, button {
             border: 1px solid #d9d9d9;
             border-radius: 100px;
             background-color: transparent;
+            @media screen and (max-width: 998px) {
+                width: 100%;
+            }
         }
         button {
             position: absolute;
@@ -516,6 +648,9 @@ input, textarea, button {
     }
     &__links {
         display: flex;
+        @media screen and (max-width: 998px) {
+            margin: 20px 0 0 auto;
+        }
         &_item {
             position: relative;
             margin-left: 18px;
@@ -611,6 +746,9 @@ input, textarea, button {
 
 .primary {
     background-color: #f5f4f2;
+    .b-center {
+        padding: 0;
+    }
     &__wrap {
         position: relative;
     }
@@ -623,12 +761,19 @@ input, textarea, button {
         box-sizing: border-box;
         padding: 105px 44px 70px;
         background-color: #ffffff;
+        @media screen and (max-width: 720px) {
+            padding: 70px 17px 50px;
+        }
     }
     &__title {
         font-size: 36px;
         font-weight: 300;
         line-height: 39px;
         color: #fcb446;
+        @media screen and (max-width: 998px) {
+            font-size: 28px;
+            line-height: 31px;
+        }
     }
     &__desc {
         display: block;
@@ -650,15 +795,39 @@ input, textarea, button {
         }
     }
     &__left {
+        position: relative;
+        z-index: 2;
         display: flex;
         width: 43%;
 
         flex-wrap: wrap;
+        @media screen and (max-width: 720px) {
+            width: 100%;
+            text-align: center;
+
+            justify-content: center;
+        }
+        .link_green {
+            margin-bottom: 5px;
+            @media screen and (max-width: 720px) {
+                margin: 0 5px 8px;
+            }
+        }
     }
     &__right {
         position: absolute;
-        top: -20px;
+        z-index: 1;
+        top: 50%;
         right: 40px;
+        width: 46.9%;
+        transform: translateY(-50%);
+        @media screen and (max-width: 720px) {
+            width: 80%;
+            opacity: 0.15;
+        }
+        img {
+            width: 100%;
+        }
     }
     ul {
         margin: 30px 0 25px 0;
@@ -685,6 +854,11 @@ input, textarea, button {
         bottom: auto;
         left: 45px;
         width: auto;
+        @media screen and (max-width: 720px) {
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
     &__bottom {
         position: relative;
@@ -693,6 +867,10 @@ input, textarea, button {
 
         justify-content: space-between;
         align-items: center;
+        @media screen and (max-width: 998px) {
+            margin: 20px 0 40px;
+            padding: 0 10px;
+        }
         &_link {
             display: flex;
             flex-direction: column;
@@ -734,6 +912,9 @@ input, textarea, button {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        @media screen and (max-width: 998px) {
+            display: none;
+        }
         &:hover {
             &:after {
                 width: calc(100% + 15px);
@@ -785,18 +966,36 @@ input, textarea, button {
 
 .main {
     display: flex;
-    padding: 0 0 60px;
+    padding: 0 10px 60px;
 
     justify-content: space-between;
+    @media screen and (max-width: 998px) {
+        flex-wrap: wrap;
+    }
     &__left {
         width: 25%;
+        min-width: 245px;
+        @media screen and (max-width: 998px) {
+            width: 100%;
+
+            order: 2;
+        }
     }
     &__right {
         width: 70%;
+        @media screen and (max-width: 1170px) {
+            width: 72%;
+        }
+        @media screen and (max-width: 998px) {
+            width: 100%;
+        }
         .caption {
-            margin: 0 0 44px 0;
+            margin: 10px 0 44px 0;
             &:first-of-type {
                 margin-top: 70px;
+                @media screen and (max-width: 998px) {
+                    margin-top: 35px;
+                }
             }
             &:after {
                 left: 40%;
@@ -851,6 +1050,9 @@ input, textarea, button {
         flex-direction: column;
         &:not(:last-of-type) {
             margin-bottom: 35px;
+            @media screen and (max-width: 620px) {
+                margin-bottom: 15px;
+            }
         }
         label {
             margin-bottom: 14px;
@@ -907,9 +1109,15 @@ input, textarea, button {
         }
     }
     &__slide {
-        padding: 27px 0 50px;
+        box-sizing: border-box;
+        padding: 27px 5px 50px;
         text-align: center;
+        img {
+            max-width: 100%;
+        }
         span {
+            display: block;
+            width: 100%;
             text-transform: uppercase;
             font-size: 32px;
             font-weight: 600;
@@ -985,7 +1193,68 @@ input, textarea, button {
     display: flex;
     flex-direction: column;
     padding: 72px 0 47px 0;
+    background-color: #ffffff;
     box-shadow: 0 0 41px 2px rgba(44, 44, 44, 0.07);
+    @media screen and (max-width: 998px) {
+        position: fixed;
+        z-index: 11;
+        z-index: 16;
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
+        height: 100%;
+        padding: 60px 10px;
+        transition: 0.5s all;
+        transform: translateX(-100%);
+        &.open {
+            overflow-x: hidden;
+            overflow-y: auto;
+            transform: translateX(0);
+        }
+    }
+    .hamb_aside {
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        visibility: hidden;
+        width: 25px;
+        padding: 10px 0;
+        transition: 0.3s all;
+        transform: translateY(-50%);
+        opacity: 0;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+        background-color: $green;
+        @media screen and (max-width: 998px) {
+            &.visible {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+        &:hover {
+            filter: contrast(120%);
+        }
+        span {
+            display: block;
+            width: 10px;
+            padding: 0 3px;
+            text-transform: uppercase;
+            word-wrap: break-word;
+            font-size: 12px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+        svg {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 12px;
+            transform: translate(0, -50%);
+            path {
+                fill: #ffffff;
+            }
+        }
+    }
     * {
         position: relative;
         z-index: 2;
@@ -1034,11 +1303,14 @@ input, textarea, button {
     &__title {
         display: block;
         box-sizing: border-box;
-        padding: 18px 0;
+        padding: 18px 50px 18px 0;
         cursor: pointer;
         transition: 0.3s all;
         font-weight: 500;
         border-bottom: 1px solid rgba(#d9d9d9,0.3);
+        @media screen and (max-width: 1170px) {
+            padding: 18px 50px 18px 0;
+        }
         &.ui-state-active {
             padding-bottom: 0;
             color: $green;
@@ -1047,13 +1319,13 @@ input, textarea, button {
                 border-color: transparent;
             }
             &:after {
-                transform: scaleY(-1);
-                bottom: 0;
                 top: auto;
+                bottom: 0;
+                transform: scaleY(-1);
 
                 filter: none;
             }
-            &:hover{
+            &:hover {
                 background: none;
                 &:before {
                     background: none;
@@ -1091,6 +1363,9 @@ input, textarea, button {
             background-image: url('../images/ico/green-arr-in-circle.png');
 
             filter: grayscale(100%) opacity(40%);
+            @media screen and (max-width: 1170px) {
+                right: 10px;
+            }
         }
         &:hover {
             background-color: #f7f7f7;
@@ -1121,11 +1396,21 @@ input, textarea, button {
     padding: 80px 0;
     background: #ffffff url('../images/advantages-bg.jpg') center 0 no-repeat;
     background-size: cover;
+    @media screen and (max-width: 998px) {
+        background: #ffffff url('../images/advantages-bg.jpg') 48% 0 no-repeat;
+    }
+    @media screen and (max-width: 760px) {
+        padding: 60px 0;
+        background: #f5f4f2;
+    }
     &__left {
         display: flex;
         width: 59.401%;
 
         flex-wrap: wrap;
+        @media screen and (max-width: 760px) {
+            width: 100%;
+        }
     }
     .caption {
         max-width: 342px;
@@ -1175,11 +1460,15 @@ input, textarea, button {
 
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: flex-start;
     &__slider {
         width: 48.484%;
         margin: 0;
         padding-bottom: 37px;
         img {
+            width: 100%;
+        }
+        @media screen and (max-width: 720px) {
             width: 100%;
         }
     }
@@ -1206,6 +1495,11 @@ input, textarea, button {
         width: 46.341%;
 
         flex-wrap: wrap;
+        @media screen and (max-width: 720px) {
+            width: 100%;
+            max-width: 550px;
+            margin: 30px auto 0;
+        }
     }
     &__table {
         width: 100%;
@@ -1225,7 +1519,6 @@ input, textarea, button {
     &__bottom {
         display: flex;
         max-width: 256px;
-        margin-top: -40px;
 
         align-items: center;
         justify-content: space-between;
@@ -1235,6 +1528,9 @@ input, textarea, button {
         margin: 33px 0 0 0;
         font-size: 14px;
         color: #393939;
+        @media screen and (max-width: 720px) {
+            margin: 20px 0 0 0;
+        }
     }
 }
 
@@ -1298,10 +1594,18 @@ input, textarea, button {
         background-color: #f5f4f2;
 
         justify-content: space-between;
+        @media screen and (max-width: 620px) {
+            padding: 20px 10px;
+
+            flex-wrap: wrap;
+        }
         &--price {
             padding: 45px 27px;
 
             align-items: center;
+            @media screen and (max-width: 620px) {
+                padding: 30px 10px;
+            }
             .sortby {
                 margin-right: 70px;
                 > div {
@@ -1317,6 +1621,15 @@ input, textarea, button {
     }
     &__left, &__right {
         width: 40.243%;
+        @media screen and (max-width: 998px) {
+            width: 45%;
+        }
+        @media screen and (max-width: 620px) {
+            width: 100%;
+        }
+    }
+    &__right {
+        margin-top: 15px;
     }
     &__elem {
         display: flex;
@@ -1325,13 +1638,22 @@ input, textarea, button {
         align-items: center;
         &:not(:first-of-type) {
             margin-top: 45px;
+            @media screen and (max-width: 998px) {
+                margin-top: 25px;
+            }
+            @media screen and (max-width: 620px) {
+                margin-top: 15px;
+            }
         }
         .checkbox {
             width: 100%;
             max-width: 90px;
             margin-bottom: 18px;
             &:not(:nth-child(3n+2)) {
-                margin-left: 20px;
+                margin-right: 20px;
+            }
+            @media screen and (max-width: 998px) {
+                margin-right: 20px !important;
             }
         }
     }
@@ -1339,6 +1661,10 @@ input, textarea, button {
         display: flex;
         width: 100%;
         margin-bottom: 20px;
+    }
+    .rangeSlider {
+        margin: 620px;
+        margin: 15px 0 0 0;
     }
 }
 
@@ -1350,19 +1676,55 @@ input, textarea, button {
         text-transform: uppercase;
         font-size: 14px;
         color: #828282;
+        @media screen and (max-width: 620px) {
+            display: none;
+        }
     }
     td {
         padding: 28px 0 35px;
         vertical-align: top;
+        @media screen and (max-width: 998px) {
+            padding: 20px 0;
+        }
+        @media screen and (max-width: 620px) {
+            position: relative;
+            display: flex;
+            padding: 5px 0;
+            padding-left: 110px;
+
+            align-items: flex-start;
+            flex-wrap: wrap;
+            &:before {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                content: attr(data-title);
+                transform: translateY(-50%);
+                text-transform: uppercase;
+                font-size: 14px;
+                color: #828282;
+            }
+        }
     }
     tr {
+        @media screen and (max-width: 620px) {
+            display: block;
+            padding-bottom: 20px;
+        }
         &:not(:first-child) {
             border-bottom: 1px solid rgba(#d9d9d9, 0.3);
+            @media screen and (max-width: 620px) {
+                padding-top: 20px;
+            }
         }
     }
     table {
         width: 100%;
         margin-bottom: 35px;
+        @media screen and (max-width: 620px) {
+            display: flex;
+            flex-direction: column;
+        }
     }
     .goods__art {
         margin: 0;
@@ -1372,20 +1734,35 @@ input, textarea, button {
     }
     &__image {
         max-width: 120px;
+        @media screen and (max-width: 620px) {
+            max-width: 100%;
+            height: auto;
+        }
     }
     .goods__price {
         margin: 10px 0 0 0;
         font-size: 18px;
+        @media screen and (max-width: 620px) {
+            width: 100%;
+        }
     }
     .btn {
         height: 44px;
         margin-top: 34px;
         font-size: 9px;
         line-height: 46px;
+        @media screen and (max-width: 620px) {
+            margin-top: 10px;
+        }
     }
     .remove {
         margin: 49px 0 0 0;
         cursor: pointer;
+        @media screen and (max-width: 620px) {
+            position: absolute;
+            display: none;
+            margin: 0;
+        }
         img {
             cursor: pointer;
         }
@@ -1398,15 +1775,24 @@ input, textarea, button {
         box-sizing: border-box;
         padding: 35px 20px;
         background-color: #f5f4f2;
+        @media screen and (max-width: 620px) {
+            flex-wrap: wrap;
+        }
         &_left, &_right {
             display: flex;
             flex-direction: column;
             width: 34%;
 
             justify-content: space-between;
+            @media screen and (max-width: 620px) {
+                width: 100%;
+            }
         }
         &_right {
             margin-left: 11.04%;
+            @media screen and (max-width: 620px) {
+                margin: 0;
+            }
         }
         &_row {
             display: flex;
@@ -1423,6 +1809,14 @@ input, textarea, button {
             .btn {
                 font-size: 11px;
             }
+            .goods__price {
+                width: auto;
+                margin-bottom: 5px;
+                color: $green;
+                &:before {
+                    background-image: url('../images/ico/ruble-green.png');
+                }
+            }
         }
     }
 }
@@ -1435,11 +1829,32 @@ input, textarea, button {
         margin: 0 0 0 -28px;
 
         flex-wrap: wrap;
+        @media screen and (max-width: 998px) {
+            margin: 0 0 0 -15px;
+        }
+        @media screen and (max-width: 720px) {
+            margin: 0 0 0 -10px;
+        }
+        @media screen and (max-width: 460px) {
+            margin: 0;
+        }
     }
     &__item {
         position: relative;
         width: calc(33.33% - 28px);
         margin: 0 0 50px 28px;
+        @media screen and (max-width: 998px) {
+            width: calc(33.33% - 15px);
+            margin: 0 0 40px 15px;
+        }
+        @media screen and (max-width: 720px) {
+            width: calc(50% - 10px);
+            margin: 0 0 20px 10px;
+        }
+        @media screen and (max-width: 460px) {
+            width: 100%;
+            margin: 0 0 15px;
+        }
         &:hover {
             .timer {
                 opacity: 1;
@@ -1458,9 +1873,10 @@ input, textarea, button {
         border-radius: 3px;
 
         align-items: center;
+        justify-content: center;
         img {
-            width: 100%;
             max-width: 100%;
+            max-height: 100%;
         }
     }
     &__date {
@@ -1471,6 +1887,7 @@ input, textarea, button {
         color: #fcb446;
     }
     .btn {
+        max-width: 100%;
         margin: 20px 0 0 0;
     }
     .showmore {
@@ -1561,6 +1978,13 @@ input, textarea, button {
         flex-direction: column;
         width: 100%;
         max-width: 312px;
+        @media screen and (max-width: 998px) {
+            width: 45%;
+            max-width: 100%;
+        }
+        @media screen and (max-width: 620px) {
+            width: 100%;
+        }
     }
     .btn {
         margin: 48px 0 0 0;
@@ -1612,16 +2036,44 @@ input, textarea, button {
         text-align: left;
         font-size: 12px;
         color: #2f2f2f;
+        @media screen and (max-width: 720px) {
+            display: flex;
+            flex-direction: column;
+        }
+        tr {
+            @media screen and (max-width: 720px) {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 10px;
+            }
+        }
         th {
             padding: 13px 10px;
             color: #828282;
             border: 1px solid #ffffff;
             background-color: #ebebeb;
+            @media screen and (max-width: 720px) {
+                display: none;
+            }
         }
         td {
-            padding: 13px 10px;
+            padding: 10px;
             border: 1px solid #ffffff;
             background-color: #f5f4f2;
+            @media screen and (max-width: 720px) {
+                display: flex;
+                padding: 0;
+
+                align-items: center;
+                &:before {
+                    width: 30%;
+                    margin-right: 10px;
+                    padding: 13px 10px;
+                    content: attr(data-title);
+                    color: #828282;
+                    background-color: #ebebeb;
+                }
+            }
         }
     }
 }
@@ -1682,18 +2134,19 @@ input, textarea, button {
         }
     }
     &__link {
+        display: flex;
+        margin: 20px 0 0 0;
         text-transform: uppercase;
         font-size: 11px;
         font-weight: 700;
         color: $green;
-        display: flex;
+
         align-items: center;
-        margin: 20px 0 0 0;
-        img{
+        img {
             margin-left: 12px;
         }
-        &--close{
-            img{
+        &--close {
+            img {
                 transform: scaleY(-1);
             }
         }
@@ -1713,8 +2166,15 @@ input, textarea, button {
         display: flex;
 
         justify-content: space-between;
+        flex-wrap: wrap;
     }
     &__col {
+        &:last-of-type {
+            @media screen and (max-width: 720px) {
+                width: 100%;
+                margin: 30px 0 0 0;
+            }
+        }
     }
     &__title {
         display: block;
@@ -1745,6 +2205,9 @@ input, textarea, button {
         }
         img {
             margin-right: 15px;
+            @media screen and (max-width: 720px) {
+                margin-right: 10px;
+            }
         }
         a {
             font-size: 14px;
@@ -1761,6 +2224,9 @@ input, textarea, button {
     .btn {
         margin: 23px 0 68px;
         color: #ffffff;
+        @media screen and (max-width: 720px) {
+            margin: 15px 0 20px;
+        }
     }
     .social_links {
         p {
@@ -1785,19 +2251,19 @@ input, textarea, button {
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ popups ~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-.callBack{
-    background-color: #fff;
-    max-width: 320px;
-    text-align: center;
-    padding: 20px 10px;
+.callBack {
     box-sizing: border-box;
-    h3{
-        font-size: 24px;
-        text-transform: uppercase;
+    max-width: 320px;
+    padding: 20px 10px;
+    text-align: center;
+    background-color: #ffffff;
+    h3 {
         margin-bottom: 20px;
+        text-transform: uppercase;
+        font-size: 24px;
     }
-    form{
-        input{
+    form {
+        input {
             box-sizing: border-box;
             width: 100%;
             height: 42px;
@@ -1806,7 +2272,7 @@ input, textarea, button {
             font-size: 16px;
             border: none;
             background-color: #f5f4f2;
-            &:not(:last-child){
+            &:not(:last-child) {
                 margin-bottom: 10px;
             }
             &:focus {
@@ -1814,7 +2280,7 @@ input, textarea, button {
             }
         }
     }
-    .btn{
+    .btn {
         margin-top: 10px;
     }
 }
