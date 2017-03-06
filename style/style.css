@@ -1,29 +1,29 @@
 @font-face {
-  font-family: 'SFUIDisplay';
-  src: url("../fonts/SFUIDisplay-light.eot?#iefix") format("embedded-opentype"), url("../fonts/SFUIDisplay-light.woff") format("woff"), url("../fonts/SFUIDisplay-light.ttf") format("truetype"), url("../fonts/SFUIDisplay-light.svg#SFUIDisplay-light") format("svg");
+  font-family: 'SFUI Display';
+  src: url("../fonts/SFUIDisplay-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/SFUIDisplay-Light.woff") format("woff"), url("../fonts/SFUIDisplay-Light.ttf") format("truetype"), url("../fonts/SFUIDisplay-Light.svg#SFUIDisplay-Light") format("svg");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
-  font-family: 'SFUIDisplay';
+  font-family: 'SFUI Display';
   src: url("../fonts/SFUIDisplay-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/SFUIDisplay-Regular.woff") format("woff"), url("../fonts/SFUIDisplay-Regular.ttf") format("truetype"), url("../fonts/SFUIDisplay-Regular.svg#SFUIDisplay-Regular") format("svg");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: 'SFUIDisplay';
+  font-family: 'SFUI Display';
   src: url("../fonts/SFUIDisplay-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/SFUIDisplay-Medium.woff") format("woff"), url("../fonts/SFUIDisplay-Medium.ttf") format("truetype"), url("../fonts/SFUIDisplay-Medium.svg#SFUIDisplay-Medium") format("svg");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: 'SFUIDisplay';
+  font-family: 'SFUI Display';
   src: url("../fonts/SFUIDisplay-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/SFUIDisplay-Semibold.woff") format("woff"), url("../fonts/SFUIDisplay-Semibold.ttf") format("truetype"), url("../fonts/SFUIDisplay-Semibold.svg#SFUIDisplay-Semibold") format("svg");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
-  font-family: 'SFUIDisplay';
+  font-family: 'SFUI Display';
   src: url("../fonts/SFUIDisplay-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/SFUIDisplay-Bold.woff") format("woff"), url("../fonts/SFUIDisplay-Bold.ttf") format("truetype"), url("../fonts/SFUIDisplay-Bold.svg#SFUIDisplay-Bold") format("svg");
   font-weight: 700;
   font-style: normal;
@@ -170,8 +170,6 @@ input *, button *, a *, textarea * {
   transform: translateX(-200%) translateY(-100%);
   opacity: 0;
   background-color: #ffffff;
-  -webkit-filter: blur(10px);
-  filter: blur(10px);
 }
 .popup--notfixed {
   position: absolute;
@@ -183,8 +181,6 @@ input *, button *, a *, textarea * {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   opacity: 1;
-  -webkit-filter: blur(0);
-  filter: blur(0);
 }
 .popup .popup_close {
   position: absolute;
@@ -215,7 +211,7 @@ html, body {
 }
 
 body {
-  font-family: 'SFUIDisplay';
+  font-family: 'SFUI Display';
   line-height: normal;
   color: #292929;
   background-color: #ffffff;
@@ -236,7 +232,7 @@ button, input[type='submit'] {
 }
 
 input, textarea, button {
-  font-family: 'SFUIDisplay';
+  font-family: 'SFUI Display';
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ global blocks ~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -633,6 +629,12 @@ input, textarea, button {
     -webkit-background-size: 100%;
     background-size: 100%;
   }
+}
+.goods__price--old {
+  width: 100%;
+  text-decoration: line-through;
+  font-weight: 600;
+  color: #ff0101;
 }
 .goods__bottom {
   display: -webkit-box;
@@ -1206,6 +1208,7 @@ input, textarea, button {
   }
 }
 .primary__title {
+  font-family: 'SFUI Display';
   font-size: 36px;
   font-weight: 300;
   line-height: 39px;
@@ -2381,6 +2384,9 @@ input, textarea, button {
   padding: 28px 0 35px;
   vertical-align: top;
 }
+.basket td:nth-child(2) {
+  max-width: 200px;
+}
 @media screen and (max-width: 998px) {
   .basket td {
     padding: 20px 0;
@@ -2405,12 +2411,9 @@ input, textarea, button {
   }
   .basket td:before {
     position: absolute;
-    top: 50%;
+    top: 15px;
     left: 0;
     content: attr(data-title);
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
     text-transform: uppercase;
     font-size: 14px;
     color: #828282;
@@ -2470,6 +2473,16 @@ input, textarea, button {
   .basket .goods__price {
     width: 100%;
   }
+}
+.basket__individual-title {
+  margin: 20px 0 10px 0;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #424242;
+}
+.basket__individual-text {
+  font-size: 14px;
+  color: #a5a5a5;
 }
 .basket .btn {
   height: 44px;
@@ -3117,7 +3130,7 @@ input, textarea, button {
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ popups ~~~~~~~~~~~~~~~~~~~~~~~~*/
-.callBack {
+.callBack, .callSubscribe {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -3126,12 +3139,12 @@ input, textarea, button {
   text-align: center;
   background-color: #ffffff;
 }
-.callBack h3 {
+.callBack h3, .callSubscribe h3 {
   margin-bottom: 20px;
   text-transform: uppercase;
   font-size: 24px;
 }
-.callBack form input {
+.callBack form input, .callSubscribe form input {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -3144,12 +3157,229 @@ input, textarea, button {
   border: none;
   background-color: #f5f4f2;
 }
-.callBack form input:not(:last-child) {
+.callBack form input:not(:last-child), .callSubscribe form input:not(:last-child) {
   margin-bottom: 10px;
 }
-.callBack form input:focus {
+.callBack form input:focus, .callSubscribe form input:focus {
   border: 1px solid #494949;
 }
-.callBack .btn {
+.callBack .btn, .callSubscribe .btn {
   margin-top: 10px;
+}
+
+.callIndividual {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 924px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0 27px rgba(50, 50, 50, 0.21);
+  box-shadow: 0 0 27px rgba(50, 50, 50, 0.21);
+}
+.callIndividual__table {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 50px 50px 0 50px;
+}
+@media screen and (max-width: 998px) {
+  .callIndividual__table {
+    padding: 20px 10px 0;
+  }
+}
+@media screen and (max-width: 620px) {
+  .callIndividual table {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media screen and (max-width: 620px) {
+  .callIndividual tbody {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 620px) {
+  .callIndividual tr {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 620px) {
+  .callIndividual td {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+.callIndividual__bottom {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 50px;
+  padding: 15px 50px;
+  background-color: #f5f4f2;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+@media screen and (max-width: 998px) {
+  .callIndividual__bottom {
+    margin-top: 20px;
+    padding: 12px 10px;
+  }
+}
+@media screen and (max-width: 620px) {
+  .callIndividual__bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+.callIndividual .title {
+  display: block;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #828282;
+}
+.callIndividual h3 {
+  font-size: 24px;
+}
+@media screen and (max-width: 620px) {
+  .callIndividual h3 {
+    margin-bottom: 15px;
+  }
+}
+.callIndividual table {
+  width: 100%;
+}
+@media screen and (max-width: 620px) {
+  .callIndividual td:not(:first-child) {
+    margin-bottom: 20px;
+  }
+}
+.callIndividual td:not(:last-child) {
+  padding-right: 15px;
+}
+.callIndividual td:nth-child(3) {
+  width: 37.34%;
+}
+@media screen and (max-width: 620px) {
+  .callIndividual td:nth-child(3) {
+    width: 100%;
+  }
+}
+.callIndividual textarea {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 94px;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  resize: none;
+  border: none;
+  background-color: #f5f4f2;
+}
+.callIndividual__file {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+@media screen and (max-width: 620px) {
+  .callIndividual__file {
+    margin: 0 auto;
+  }
+}
+.callIndividual__file label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 160px;
+  height: 44px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 9px;
+  font-weight: 700;
+  color: #fcb446;
+  border: 1px solid #fcb446;
+  border-radius: 6px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.callIndividual__file label img {
+  margin: 0 0 0 13px;
+  cursor: pointer;
+}
+.callIndividual__file input {
+  display: none;
+}
+.callIndividual__file span {
+  overflow: hidden;
+  width: 135px;
+  margin-left: 13px;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  font-weight: 500;
+  color: #c1c1c1;
+}
+@media screen and (max-width: 620px) {
+  .callIndividual__file span {
+    width: 100px;
+    margin-left: 5px;
+  }
+}
+.callIndividual .btn {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 48px;
+  font-size: 11px;
+  line-height: 48px;
 }

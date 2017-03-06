@@ -25,6 +25,8 @@
         <script src="js/jquery.maskedinput.min.js"></script>
         <script src="js/readmore.min.js"></script>
         <script src="js/popup.js"></script>
+        <script src="js/jquery.validate.js"></script>
+        <script src="js/validate.page.js"></script>
         <script src="js/countdown.min.js"></script>
         <!-- Google map -->
         <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyD5oswumLUaPeyYKa0zpFR7gNsobVkS7eI"></script>
@@ -197,7 +199,7 @@
                         </div>
                         <div class="goods__bottom">
                             <a href="#" class="goods__addcart"><img src="images/ico/add-cart.png" alt=""></a>
-                            <a href="#" class="btn">индивидуалный заказ</a>
+                            <a href="#" class="btn callPopup" data-popupBlock="callIndividual">индивидуалный заказ</a>
                         </div>
                     </div>
                     <div class="goods__item">
@@ -214,7 +216,7 @@
                         </div>
                         <div class="goods__bottom">
                             <a href="#" class="goods__addcart"><img src="images/ico/add-cart.png" alt=""></a>
-                            <a href="#" class="btn">индивидуалный заказ</a>
+                            <a href="#" class="btn callPopup" data-popupBlock="callIndividual">индивидуалный заказ</a>
                         </div>
                     </div>
                     <div class="goods__item">
@@ -231,7 +233,7 @@
                         </div>
                         <div class="goods__bottom">
                             <a href="#" class="goods__addcart"><img src="images/ico/add-cart.png" alt=""></a>
-                            <a href="#" class="btn">индивидуалный заказ</a>
+                            <a href="#" class="btn callPopup" data-popupBlock="callIndividual">индивидуалный заказ</a>
                         </div>
                     </div>
                     <div class="goods__item">
@@ -248,7 +250,7 @@
                         </div>
                         <div class="goods__bottom">
                             <a href="#" class="goods__addcart"><img src="images/ico/add-cart.png" alt=""></a>
-                            <a href="#" class="btn">индивидуалный заказ</a>
+                            <a href="#" class="btn callPopup" data-popupBlock="callIndividual">индивидуалный заказ</a>
                         </div>
                     </div>
                     <div class="goods__item">
@@ -265,7 +267,7 @@
                         </div>
                         <div class="goods__bottom">
                             <a href="#" class="goods__addcart"><img src="images/ico/add-cart.png" alt=""></a>
-                            <a href="#" class="btn">индивидуалный заказ</a>
+                            <a href="#" class="btn callPopup" data-popupBlock="callIndividual">индивидуалный заказ</a>
                         </div>
                     </div>
                     <div class="goods__item">
@@ -282,7 +284,7 @@
                         </div>
                         <div class="goods__bottom">
                             <a href="#" class="goods__addcart"><img src="images/ico/add-cart.png" alt=""></a>
-                            <a href="#" class="btn">индивидуалный заказ</a>
+                            <a href="#" class="btn callPopup" data-popupBlock="callIndividual">индивидуалный заказ</a>
                         </div>
                     </div>
                     <div class="goods__item">
@@ -299,7 +301,7 @@
                         </div>
                         <div class="goods__bottom">
                             <a href="#" class="goods__addcart"><img src="images/ico/add-cart.png" alt=""></a>
-                            <a href="#" class="btn">индивидуалный заказ</a>
+                            <a href="#" class="btn callPopup" data-popupBlock="callIndividual">индивидуалный заказ</a>
                         </div>
                     </div>
                     <div class="goods__item">
@@ -316,7 +318,7 @@
                         </div>
                         <div class="goods__bottom">
                             <a href="#" class="goods__addcart"><img src="images/ico/add-cart.png" alt=""></a>
-                            <a href="#" class="btn">индивидуалный заказ</a>
+                            <a href="#" class="btn callPopup" data-popupBlock="callIndividual">индивидуалный заказ</a>
                         </div>
                     </div>
                 </div>
@@ -419,19 +421,19 @@
                             <img src="images/sidebar/slider-img-1.png" alt="">
                             <span>ХОРОШИЕ новости</span>
                             <p>Подпишитесь на рассылку и будьте в курсе новых акций и скидок</p>
-                            <a href="#" class="btn">подписаться</a>
+                            <a href="#" class="btn callSubscribe" data-popupBlock="callSubscribe">подписаться</a>
                         </div>
                         <div class="sidebar__slide swiper-slide">
                             <img src="images/sidebar/slider-img-1.png" alt="">
                             <span>ХОРОШИЕ новости</span>
                             <p>Подпишитесь на рассылку и будьте в курсе новых акций и скидок</p>
-                            <a href="#" class="btn">подписаться</a>
+                            <a href="#" class="btn callSubscribe" data-popupBlock="callSubscribe">подписаться</a>
                         </div>
                         <div class="sidebar__slide swiper-slide">
                             <img src="images/sidebar/slider-img-1.png" alt="">
                             <span>ХОРОШИЕ новости</span>
                             <p>Подпишитесь на рассылку и будьте в курсе новых акций и скидок</p>
-                            <a href="#" class="btn">подписаться</a>
+                            <a href="#" class="btn callSubscribe" data-popupBlock="callSubscribe">подписаться</a>
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
@@ -455,7 +457,7 @@
                         </div>
                         <div class="goods__bottom">
                             <a href="#" class="goods__addcart"><img src="images/ico/add-cart.png" alt=""></a>
-                            <a href="#" class="btn">индивидуалный заказ</a>
+                            <a href="#" class="btn callPopup" data-popupBlock="callIndividual">индивидуалный заказ</a>
                         </div>
                     </div>
                     <div class="goods__item">
@@ -473,7 +475,7 @@
                         </div>
                         <div class="goods__bottom">
                             <a href="#" class="goods__addcart"><img src="images/ico/add-cart.png" alt=""></a>
-                            <a href="#" class="btn">индивидуалный заказ</a>
+                            <a href="#" class="btn callPopup" data-popupBlock="callIndividual">индивидуалный заказ</a>
                         </div>
                     </div>
                     <div class="goods__item">
@@ -491,7 +493,7 @@
                         </div>
                         <div class="goods__bottom">
                             <a href="#" class="goods__addcart"><img src="images/ico/add-cart.png" alt=""></a>
-                            <a href="#" class="btn">индивидуалный заказ</a>
+                            <a href="#" class="btn callPopup" data-popupBlock="callIndividual">индивидуалный заказ</a>
                         </div>
                     </div>
                 </div>
@@ -512,7 +514,7 @@
                         </div>
                         <div class="goods__bottom">
                             <a href="#" class="goods__addcart"><img src="images/ico/add-cart.png" alt=""></a>
-                            <a href="#" class="btn">индивидуалный заказ</a>
+                            <a href="#" class="btn callPopup" data-popupBlock="callIndividual">индивидуалный заказ</a>
                         </div>
                     </div>
                     <div class="goods__item">
@@ -530,7 +532,7 @@
                         </div>
                         <div class="goods__bottom">
                             <a href="#" class="goods__addcart"><img src="images/ico/add-cart.png" alt=""></a>
-                            <a href="#" class="btn">индивидуалный заказ</a>
+                            <a href="#" class="btn callPopup" data-popupBlock="callIndividual">индивидуалный заказ</a>
                         </div>
                     </div>
                     <div class="goods__item">
@@ -548,7 +550,7 @@
                         </div>
                         <div class="goods__bottom">
                             <a href="#" class="goods__addcart"><img src="images/ico/add-cart.png" alt=""></a>
-                            <a href="#" class="btn">индивидуалный заказ</a>
+                            <a href="#" class="btn callPopup" data-popupBlock="callIndividual">индивидуалный заказ</a>
                         </div>
                     </div>
                     <div class="goods__item">
@@ -566,7 +568,7 @@
                         </div>
                         <div class="goods__bottom">
                             <a href="#" class="goods__addcart"><img src="images/ico/add-cart.png" alt=""></a>
-                            <a href="#" class="btn">индивидуалный заказ</a>
+                            <a href="#" class="btn callPopup" data-popupBlock="callIndividual">индивидуалный заказ</a>
                         </div>
                     </div>
                     <div class="goods__item">
@@ -584,7 +586,7 @@
                         </div>
                         <div class="goods__bottom">
                             <a href="#" class="goods__addcart"><img src="images/ico/add-cart.png" alt=""></a>
-                            <a href="#" class="btn">индивидуалный заказ</a>
+                            <a href="#" class="btn callPopup" data-popupBlock="callIndividual">индивидуалный заказ</a>
                         </div>
                     </div>
                     <div class="goods__item">
@@ -602,7 +604,7 @@
                         </div>
                         <div class="goods__bottom">
                             <a href="#" class="goods__addcart"><img src="images/ico/add-cart.png" alt=""></a>
-                            <a href="#" class="btn">индивидуалный заказ</a>
+                            <a href="#" class="btn callPopup" data-popupBlock="callIndividual">индивидуалный заказ</a>
                         </div>
                     </div>
                 </div>
@@ -689,7 +691,7 @@
                 </div>
                 <div class="footer__col">
                     <p>Будьте в курсе новостей первыми!</p>
-                    <a href="#" class="btn">подписаться</a>
+                    <a href="#" class="btn callPopup" data-popupBlock="callSubscribe">подписаться</a>
                     <div class="social_links">
                         <p>Мы в социальных сетях</p>
                         <a href="#" class="social_links__item"><img src="images/ico/odnoklas.png" alt=""></a>
@@ -710,12 +712,55 @@
         <div class="popup callBack">
             <div class="popup_close"><img src="images/ico/remove.png" alt=""></div>
             <h3 class="callBack__title">Обратный звонок</h3>
-            <form action="">
-                <input type="text" placeholder="Ваше имя">
-                <input type="tel" placeholder="Ваш телефон">
-                <input type="email" placeholder="Ваш email">
+            <form action="" class="form-validate">
+                <input type="text" placeholder="Ваше имя" name="usr_name">
+                <input type="tel" placeholder="Ваш телефон" name="usr_phone">
+                <input type="email" placeholder="Ваш email" name="usr_email">
                 <button type="submit" class="btn">Отправить</button>
             </form>
+        </div>
+        <div class="popup callSubscribe">
+            <div class="popup_close"><img src="images/ico/remove.png" alt=""></div>
+            <h3 class="callBack__title">Подписаться</h3>
+            <form action="" class="form-validate">
+                <input type="text" placeholder="Ваше имя" name="usr_name">
+                <input type="email" placeholder="Ваш email" name="usr_email">
+                <button type="submit" class="btn">Отправить</button>
+            </form>
+        </div>
+        <div class="popup popup--notfixed callIndividual visible">
+            <div class="popup_close"><img src="images/ico/remove.png" alt=""></div>
+            <div class="callIndividual__table">
+                <table>
+                    <tr>
+                        <td>
+                            <span class="goods__art">Артикул:КД-0000029</span>
+                            <p class="goods__name">Кукольный домик открытого типа</p>
+                        </td>
+                        <td>
+                            <span class="title">Количество:</span>
+                            <div class="quantity">
+                                <div class="quantity__btn quantity__btn--minus">-</div>
+                                <input class="quantity__number" type="text" value="1">
+                                <div class="quantity__btn quantity__btn--plus">+</div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="title">Описание:</span>
+                            <textarea></textarea>
+                            <div class="callIndividual__file">
+                                <label for="change-file">Выберите файл<img src="images/ico/clip.png" alt=""></label>
+                                <input type="file" id="change-file" accept="image/x-png,image/gif,image/jpeg">
+                                <span class="change-file-text">Файл не выбран</span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="callIndividual__bottom">
+                <h3>Индивидуальный заказ</h3>
+                <a href="#" class="btn btn--green">оформить</a>
+            </div>
         </div>
     <script src="_trg.js"></script>
     </body>

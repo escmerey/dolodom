@@ -28,10 +28,10 @@ $(function() {
     function hambVisible() {
         if ($(window).scrollTop() > $('.main').offset().top) {
             $('.hamb_aside').addClass('visible');
-        }else{
+        } else {
             $('.hamb_aside').removeClass('visible');
         }
-        if ($(window).scrollTop() > $('.main').offset().top + $('.main').height()){
+        if ($(window).scrollTop() > $('.main').offset().top + $('.main').height()) {
             $('.hamb_aside').removeClass('visible');
         }
     }
@@ -125,20 +125,20 @@ $(function() {
     $('.nice-select .list').perfectScrollbar();
 
     /* слайдер цен */
-    $( ".rangeSlider" ).slider({
+    $(".rangeSlider").slider({
         range: true,
-        slide: function( event, ui ) {
+        slide: function(event, ui) {
             $(this).find('.ui-slider-handle').find('.count').eq(0).text(ui.values[0]);
             $(this).find('.ui-slider-handle').find('.count').eq(1).text(ui.values[1]);
         },
-        create: function( event, ui ) {
+        create: function(event, ui) {
             $(this).find('.ui-slider-handle').append('<div class="count"></div>');
             $(this).slider("option", "min", parseInt($(this).attr('data-minCount')));
             $(this).slider("option", "max", parseInt($(this).attr('data-maxCount')));
             $(this).slider("values", 0, parseInt($(this).attr('data-minCount')));
             $(this).slider("values", 1, parseInt($(this).attr('data-maxCount')));
-            $(this).find('.ui-slider-handle').find('.count').eq(0).text($(this).slider( "option", "min" ));
-            $(this).find('.ui-slider-handle').find('.count').eq(1).text($(this).slider( "option", "max" ));
+            $(this).find('.ui-slider-handle').find('.count').eq(0).text($(this).slider("option", "min"));
+            $(this).find('.ui-slider-handle').find('.count').eq(1).text($(this).slider("option", "max"));
         }
     });
 
@@ -149,15 +149,26 @@ $(function() {
         heightStyle: "content"
     });
 
+    countdown.MY =
+        countdown.DAYS |
+        countdown.HOURS |
+        countdown.MINUTES |
+        countdown.SECONDS;
+
     var Interval = setInterval(function() {
         $('.timer').each(function(index, el) {
-            thisData = new Date($(this).attr('data-year'), $(this).attr('data-month')-1, $(this).attr('data-day'), $(this).attr('data-hours'), 0, 0, 0);
-            Timer = countdown(null, thisData, countdown.DAYS);
+            thisData = new Date($(this).attr('data-year'), $(this).attr('data-month') - 1, $(this).attr('data-day'), $(this).attr('data-hours'), 0, 0, 0);
+            Timer = countdown(null, thisData, countdown.MY);
+            console.log(Timer)
             $(this).find('.day').text(Timer.days);
             $(this).find('.hour').text(Timer.hours);
             $(this).find('.minuteS').text(Timer.minuteS);
         });
     }, 1000);
+
+    $('#change-file').on('change', function(event) {
+        $('.change-file-text').text($(this).val())
+    });
 
     if ($('#map_canvas').lenght) {
         mapInitialize();

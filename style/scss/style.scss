@@ -15,7 +15,7 @@ html, body {
 
 body {
     // min-width: 1200px;
-    font-family: 'SFUIDisplay';
+    font-family: 'SFUI Display';
     line-height: normal;
     color: #292929;
     background-color: #ffffff;
@@ -37,7 +37,7 @@ button, input[type='submit'] {
 }
 
 input, textarea, button {
-    font-family: 'SFUIDisplay';
+    font-family: 'SFUI Display';
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ global blocks ~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -325,6 +325,12 @@ input, textarea, button {
                 height: 20px;
                 background-size: 100%;
             }
+        }
+        &--old {
+            width: 100%;
+            text-decoration: line-through;
+            font-weight: 600;
+            color: #ff0101;
         }
     }
     &__bottom {
@@ -766,6 +772,7 @@ input, textarea, button {
         }
     }
     &__title {
+        font-family: 'SFUI Display';
         font-size: 36px;
         font-weight: 300;
         line-height: 39px;
@@ -1690,6 +1697,9 @@ input, textarea, button {
     td {
         padding: 28px 0 35px;
         vertical-align: top;
+        &:nth-child(2) {
+            max-width: 200px;
+        }
         @media screen and (max-width: 998px) {
             padding: 20px 0;
         }
@@ -1703,10 +1713,9 @@ input, textarea, button {
             flex-wrap: wrap;
             &:before {
                 position: absolute;
-                top: 50%;
+                top: 15px;
                 left: 0;
                 content: attr(data-title);
-                transform: translateY(-50%);
                 text-transform: uppercase;
                 font-size: 14px;
                 color: #828282;
@@ -1752,6 +1761,16 @@ input, textarea, button {
         @media screen and (max-width: 620px) {
             width: 100%;
         }
+    }
+    &__individual-title {
+        margin: 20px 0 10px 0;
+        text-transform: uppercase;
+        font-size: 14px;
+        color: #424242;
+    }
+    &__individual-text {
+        font-size: 14px;
+        color: #a5a5a5;
     }
     .btn {
         height: 44px;
@@ -2258,7 +2277,7 @@ input, textarea, button {
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ popups ~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-.callBack {
+.callBack, .callSubscribe {
     box-sizing: border-box;
     max-width: 320px;
     padding: 20px 10px;
@@ -2289,5 +2308,154 @@ input, textarea, button {
     }
     .btn {
         margin-top: 10px;
+    }
+}
+
+.callIndividual {
+    box-sizing: border-box;
+    max-width: 924px;
+    background-color: #ffffff;
+    box-shadow: 0 0 27px rgba(50, 50, 50, 0.21);
+    &__table {
+        box-sizing: border-box;
+        padding: 50px 50px 0 50px;
+        @media screen and (max-width: 998px) {
+            padding: 20px 10px 0;
+        }
+    }
+    table {
+        @media screen and (max-width: 620px) {
+            display: flex;
+        }
+    }
+    tbody {
+        @media screen and (max-width: 620px) {
+            display: flex;
+            width: 100%;
+        }
+    }
+    tr {
+        @media screen and (max-width: 620px) {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+    td {
+        @media screen and (max-width: 620px) {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+
+            align-items: center;
+        }
+    }
+    &__bottom {
+        display: flex;
+        margin-top: 50px;
+        padding: 15px 50px;
+        background-color: #f5f4f2;
+
+        align-items: center;
+        justify-content: space-between;
+        @media screen and (max-width: 998px) {
+            margin-top: 20px;
+            padding: 12px 10px;
+        }
+        @media screen and (max-width: 620px) {
+            flex-direction: column;
+        }
+    }
+    .title {
+        display: block;
+        margin: 0 0 10px;
+        text-transform: uppercase;
+        font-size: 14px;
+        color: #828282;
+    }
+    h3 {
+        font-size: 24px;
+        @media screen and (max-width: 620px) {
+            margin-bottom: 15px;
+        }
+    }
+    table {
+        width: 100%;
+    }
+    td {
+        @media screen and (max-width: 620px) {
+            &:not(:first-child) {
+                margin-bottom: 20px;
+            }
+        }
+        &:not(:last-child) {
+            padding-right: 15px;
+        }
+        &:nth-child(3) {
+            width: 37.34%;
+            @media screen and (max-width: 620px) {
+                width: 100%;
+            }
+        }
+    }
+    textarea {
+        box-sizing: border-box;
+        width: 100%;
+        height: 94px;
+        margin-bottom: 10px;
+        padding: 10px 15px;
+        resize: none;
+        border: none;
+        background-color: #f5f4f2;
+    }
+    &__file {
+        display: flex;
+
+        align-items: center;
+        @media screen and (max-width: 620px) {
+            margin: 0 auto;
+        }
+        label {
+            display: flex;
+            width: 160px;
+            height: 44px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 9px;
+            font-weight: 700;
+            color: #fcb446;
+            border: 1px solid #fcb446;
+            border-radius: 6px;
+
+            align-items: center;
+            justify-content: center;
+            img {
+                margin: 0 0 0 13px;
+                cursor: pointer;
+            }
+        }
+        input {
+            display: none;
+        }
+        span {
+            overflow: hidden;
+            width: 135px;
+            margin-left: 13px;
+            text-overflow: ellipsis;
+            font-size: 12px;
+            font-weight: 500;
+            color: #c1c1c1;
+            @media screen and (max-width: 620px) {
+                width: 100px;
+                margin-left: 5px;
+            }
+        }
+    }
+    .btn {
+        box-sizing: border-box;
+        height: 48px;
+        font-size: 11px;
+        line-height: 48px;
     }
 }

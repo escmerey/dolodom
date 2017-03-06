@@ -34,7 +34,6 @@
     opacity: 0;
     background-color: #ffffff;
 
-    filter: blur(10px);
     &--notfixed {
         position: absolute;
         top: 0;
@@ -44,7 +43,6 @@
         transform: translate(-50%, -50%);
         opacity: 1;
 
-        filter: blur(0);
     }
     .popup_close {
         position: absolute;
