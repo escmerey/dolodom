@@ -1204,7 +1204,6 @@ input, textarea, button {
     box-shadow: 0 0 41px 2px rgba(44, 44, 44, 0.07);
     @media screen and (max-width: 998px) {
         position: fixed;
-        z-index: 11;
         z-index: 16;
         top: 0;
         left: 0;
@@ -1213,6 +1212,8 @@ input, textarea, button {
         padding: 60px 10px;
         transition: 0.5s all;
         transform: translateX(-100%);
+        max-width: 300px;
+        width: 100%;
         &.open {
             overflow-x: hidden;
             overflow-y: auto;
@@ -1266,8 +1267,7 @@ input, textarea, button {
         position: relative;
         z-index: 2;
     }
-    > a {
-        margin-top: 22px;
+    .orange {
         font-size: 14px;
         font-weight: 500;
         color: #fcb446;
@@ -1307,96 +1307,169 @@ input, textarea, button {
             margin-right: 15px;
         }
     }
-    &__title {
-        display: block;
-        box-sizing: border-box;
-        padding: 18px 50px 18px 0;
-        cursor: pointer;
-        transition: 0.3s all;
-        font-weight: 500;
-        border-bottom: 1px solid rgba(#d9d9d9,0.3);
-        @media screen and (max-width: 1170px) {
-            padding: 18px 50px 18px 0;
-        }
-        &.ui-state-active {
-            padding-bottom: 0;
-            color: $green;
-            border-color: transparent;
-            &:before {
-                border-color: transparent;
+    &__menu{
+        margin-bottom: 10px;
+    }
+    .has-sub {
+        position: relative;
+        > a {
+            font-size: 16px;
+            text-decoration: none !important;
+            border-bottom: 1px solid rgba(#d9d9d9,0.3);
+            @media screen and (max-width: 1170px) {
+                padding: 18px 50px 18px 0;
             }
-            &:after {
-                top: auto;
-                bottom: 0;
+            &:before {
+                    position: absolute;
+                    top: 0;
+                    right: 100%;
+                    width: 9999px;
+                    height: 100%;
+                    content: '';
+                    transition: 0.3s all;
+                    border-bottom: 1px solid rgba(#d9d9d9,0.3);
+                }
+            &:hover {
+                background-color: #f7f7f7;
+                &:before {
+                    background-color: #f7f7f7;
+                }
+            }
+        }
+        &.open {
+            > .arr {
                 transform: scaleY(-1);
 
                 filter: none;
-            }
-            &:hover {
-                background: none;
-                &:before {
-                    background: none;
-                }
-            }
-            ~ .catalog__title {
-                border-top: 1px solid rgba(#d9d9d9,0.3);
-                &:before {
-                    border-top: 1px solid rgba(#d9d9d9,0.3);
+                &:hover {
+                    filter: opacity(80%);
                 }
             }
         }
-        &:not(:first-of-type) {
-            margin-top: -1px;
+        > ul {
+            margin-left: 15px;
         }
-        &:before {
-            position: absolute;
-            top: 0;
-            right: 100%;
-            width: 9999px;
-            height: 100%;
-            content: '';
-            transition: 0.3s all;
-            border-bottom: 1px solid rgba(#d9d9d9,0.3);
-        }
-        &:after {
-            position: absolute;
-            top: 50%;
-            right: 28px;
-            width: 18px;
-            height: 18px;
-            content: '';
-            transition: 0.3s all;
-            transform: translate(0, -50%);
-            background-image: url('../images/ico/green-arr-in-circle.png');
+    }
+    .arr {
+        position: absolute;
+        top: 13px;
+        right: 28px;
+        width: 18px;
+        height: 18px;
+        content: '';
+        cursor: pointer;
+        transition: 0.3s all;
+        background-image: url('../images/ico/green-arr-in-circle.png');
 
-            filter: grayscale(100%) opacity(40%);
-            @media screen and (max-width: 1170px) {
-                right: 10px;
-            }
+        filter: grayscale(100%) opacity(40%);
+        @media screen and (max-width: 1170px) {
+            right: 10px;
         }
         &:hover {
-            background-color: #f7f7f7;
-            &:before {
-                background-color: #f7f7f7;
-            }
+            filter: grayscale(100%) opacity(80%);
         }
     }
-    &__box {
-        display: flex;
-        flex-direction: column;
-        padding: 15px 0 20px;
-        a {
-            margin-left: 13px;
-            font-size: 14px;
-            color: #2e2e2e;
-            &:not(:first-child) {
-                margin-top: 13px;
-            }
-            &:hover {
-                text-decoration: underline;
-            }
+    a {
+        display: block;
+        box-sizing: border-box;
+        padding: 13px 50px 13px 0;
+        cursor: pointer;
+        font-size: 14px;
+        transition: 0.3s all;
+        font-weight: 500;
+        color: #292929;
+        &:hover {
+            text-decoration: underline;
         }
     }
+    // &__title {
+    //     display: block;
+    //     box-sizing: border-box;
+    //     padding: 18px 50px 18px 0;
+    //     cursor: pointer;
+    //     transition: 0.3s all;
+    //     font-weight: 500;
+    //     border-bottom: 1px solid rgba(#d9d9d9,0.3);
+    //     @media screen and (max-width: 1170px) {
+    //         padding: 18px 50px 18px 0;
+    //     }
+    //     &.open {
+    //         padding-bottom: 0;
+    //         color: $green;
+    //         border-color: transparent;
+    //         &:before {
+    //             border-color: transparent;
+    //         }
+    //         &:after {
+    //             top: auto;
+    //             bottom: 0;
+    //             transform: scaleY(-1);
+    //             filter: none;
+    //         }
+    //         &:hover {
+    //             background: none;
+    //             &:before {
+    //                 background: none;
+    //             }
+    //         }
+    //         ~ .catalog__title {
+    //             border-top: 1px solid rgba(#d9d9d9,0.3);
+    //             &:before {
+    //                 border-top: 1px solid rgba(#d9d9d9,0.3);
+    //             }
+    //         }
+    //     }
+    //     &:not(:first-of-type) {
+    //         margin-top: -1px;
+    //     }
+    //     &:before {
+    //         position: absolute;
+    //         top: 0;
+    //         right: 100%;
+    //         width: 9999px;
+    //         height: 100%;
+    //         content: '';
+    //         transition: 0.3s all;
+    //         border-bottom: 1px solid rgba(#d9d9d9,0.3);
+    //     }
+    //     &:after {
+    //         position: absolute;
+    //         top: 50%;
+    //         right: 28px;
+    //         width: 18px;
+    //         height: 18px;
+    //         content: '';
+    //         transition: 0.3s all;
+    //         transform: translate(0, -50%);
+    //         background-image: url('../images/ico/green-arr-in-circle.png');
+    //         filter: grayscale(100%) opacity(40%);
+    //         @media screen and (max-width: 1170px) {
+    //             right: 10px;
+    //         }
+    //     }
+    // &:hover {
+    //     background-color: #f7f7f7;
+    //     &:before {
+    //         background-color: #f7f7f7;
+    //     }
+    // }
+    // }
+    // &__box {
+    //     display: flex;
+    //     flex-direction: column;
+    //     padding: 15px 0 20px;
+    //     a {
+    //         margin-left: 13px;
+    //         font-size: 14px;
+    //         color: #2e2e2e;
+    //         &:not(:first-child) {
+    //             margin-top: 13px;
+    //         }
+    //         &:hover {
+    //             text-decoration: underline;
+    //         }
+    //     }
+    // }
 }
 
 .advantages {

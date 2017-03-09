@@ -107,11 +107,32 @@ $(function() {
         }
     });
 
-    $('.catalog__menu').accordion({
-        collapsible: true,
-        active: 0,
-        animate: 200,
-        heightStyle: "content"
+    // $('.catalog__menu').multiaccordion({
+    //     accordion: 'true',
+    //     speed: 500,
+    //     closedSign: '',
+    //     openedSign: ''
+    // });
+
+    $('.catalog__menu .has-sub > ul').slideUp();
+
+    $('.catalog__menu .has-sub > .arr').on('click', function() {
+        $(this).removeAttr('href');
+        var element = $(this).parent('li');
+        if (element.hasClass('open')) {
+            element.removeClass('open');
+            element.find('li').removeClass('open');
+            element.find('ul').slideUp();
+        } else {
+            element.addClass('open');
+            element.children('ul').slideDown();
+            element.siblings('li').children('ul').slideUp();
+            element.siblings('li').removeClass('open');
+            element.siblings('li').find('li').removeClass('open');
+            element.siblings('li').find('ul').slideUp();
+        }
+
+        // $('#menu>ul>li.has-sub>a').append('<span class="holder"></span>');
     });
 
     var swiperSidebar = new Swiper('.card__slider', {
