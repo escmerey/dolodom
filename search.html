@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <meta name="keywords" content="document" />
+        <meta name="description" content="document" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
+        <!-- Document stylesheet files -->
+        <link rel="stylesheet" href="style/swiper.min.css"/>
+        <link rel="stylesheet" href="style/nice-select.css"/>
+        <link rel="stylesheet" href="style/perfect-scrollbar.css"/>
+        <link rel="stylesheet" href="style/style.css"/>
+        <!-- jQuery scripts -->
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/jQueryUITouch.js"></script>
+        <script src="js/jquery.nice-select.min.js"></script>
+        <script src="js/swiper.jquery.min.js"></script>
+        <script src="js/perfect-scrollbar.jquery.min.js"></script>
+        <script src="js/jquery.maskedinput.min.js"></script>
+        <script src="js/readmore.min.js"></script>
+        <script src="js/popup.js"></script>
+        <script src="js/jquery.validate.js"></script>
+        <script src="js/validate.page.js"></script>
+        <script src="js/countdown.min.js"></script>
+        <!-- Google map -->
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyD5oswumLUaPeyYKa0zpFR7gNsobVkS7eI"></script>
+        <!-- Functionaly scripts -->
+        <script type="text/javascript" src="js/main.js"></script>
+    </head>
+    <body>
+        <header class="header">
+            <div class="b-center">
+                <a href="/" class="header__logo">
+                    <img src="images/castle.png" alt="">
+                    <span>3d пазлы и наборы для творчества</span>
+                </a>
+                <nav class="header__menu nav">
+                    <a href="#" class="nav__item nav__item--active">Каталог</a>
+                    <a href="#" class="nav__item">Скидки</a>
+                    <a href="#" class="nav__item">Оплата и доставка</a>
+                    <a href="#" class="nav__item">Отзывы</a>
+                    <a href="#" class="nav__item">О нас</a>
+                </nav>
+                <div class="header__search">
+                    <input type="text" placeholder="Поиск">
+                    <button type="submit"><img src="images/ico/search-ico.png" alt=""></button>
+                    <div class="fast_search">
+                        <div class="fast_search__row">
+                            <div class="fast_search__col">
+                                Категории
+                            </div>
+                            <div class="fast_search__col">
+                                <a href="#">Кукольные домики</a>
+                                <a href="#">Чайные домики - Товары для творчества</a>
+                                <a href="#">Кукольные домики другое - Кукольные домики</a>
+                                <a href="#">Кукольные домики - Кукольные домики</a>
+                                <a href="#">Полки домики - Кукольные домики</a>
+                            </div>
+                        </div>
+                        <div class="fast_search__row">
+                            <div class="fast_search__col">
+                                Товары
+                            </div>
+                            <div class="fast_search__col">
+                                <a href="#"><img src="http://dolodom.com/bundles/esdolodom/images2/img1/KDD-0000009-1_447.jpg">Заборчик для кукольного домика</a>
+                                <a href="#"><img src="http://dolodom.com/bundles/esdolodom/images2/img1/9E9FB6045E2E4E3C8FA78B207BC63FE9.jpg">"Домик" 16х20</a>
+                                <a href="#"><img src="http://dolodom.com/bundles/esdolodom/images2/img1/1F315CE6CD214786AA0D3C58A0ECA43E.jpg">"Домик" 6х20</a>
+                                <a href="#"><img src="http://dolodom.com/bundles/esdolodom/images2/img1/DB85EC77F0384A03B9A0C4E731CD9D07.jpg">Чудо-домик Аделинки</a>
+                                <a href="#"><img src="http://dolodom.com/bundles/esdolodom/images2/img1/4A8B01E7526349A781E5BA9DB530CFE1.jpg">Держатель для салфеток Домик</a>
+                                <a href="#"><img src="http://dolodom.com/bundles/esdolodom/images2/img1/BE009CD19B2149ED88C07D607E9D4864.jpg">Чудо-домик </a>
+                                <a href="#"><img src="http://dolodom.com/bundles/esdolodom/images2/img1/26B867E913894B29BA3252142C7817DC.jpg">Чудо-домик Елизаветки</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__links">
+                    <a class="header__links_item callPopup" data-popupBlock="callBack">
+                        <img src="images/ico/phone-receiver.png" alt="">
+                    </a>
+                    <a href="#" class="header__links_item cart-link">
+                        <img src="images/ico/cart-ico.png" alt="">
+                        <span>10</span>
+                    </a>
+                    <div class="header__links_item user">
+                        <img src="images/ico/user-ico.png" alt="">
+                        <img src="images/ico/green-arr-in-circle.png" alt="" class="user__arr">
+                        <div class="user__box">
+                            <a href="#">
+                                <div>
+                                    <img src="images/ico/user.png" alt="">
+                                </div>
+                                Мария
+                            </a>
+                            <a href="#">
+                                <div>
+                                    <img src="images/ico/cart.png" alt="">
+                                </div>Мои заказы
+                            </a>
+                            <a href="#">
+                                <div>
+                                    <img src="images/ico/hearth.png" alt="">
+                                </div>
+                                Мои индивидуальные товары
+                            </a>
+                            <a href="#">
+                                <div>
+                                    <img src="images/ico/sign-out.png" alt="">
+                                </div>
+                                Выйти
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main b-center">
+        <div class="main__left sidebar">
+            <div class="catalog">
+                    <div class="hamb_aside">
+                        <span>Каталог</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 306 306"><path d="M94.35 0l-35.7 35.7L175.95 153 58.65 270.3l35.7 35.7 153-153"/></svg>
+                    </div>
+                    <h4 class="h4"><img src="images/ico/bagage.png" alt="">Каталог</h4>
+                    <div class="catalog__menu">
+                        <span class="catalog__title">Игрушки</span>
+                        <div class="catalog__box">
+                            <a href="#">Раскраски</a>
+                            <a href="#">Елочные украшения</a>
+                        </div>
+                        <span class="catalog__title">Игрушки на подставке</span>
+                        <div class="catalog__box">
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                        </div>
+                        <span class="catalog__title">Кукольные домики</span>
+                        <div class="catalog__box">
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                        </div>
+                        <span class="catalog__title">Товары для творчества</span>
+                        <div class="catalog__box">
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                        </div>
+                        <span class="catalog__title">Топперы</span>
+                        <div class="catalog__box">
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                        </div>
+                        <span class="catalog__title">Разное</span>
+                        <div class="catalog__box">
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                        </div>
+                        <span class="catalog__title">Интерьерные слова</span>
+                        <div class="catalog__box">
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                        </div>
+                        <span class="catalog__title">Акриловая краска</span>
+                        <div class="catalog__box">
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                        </div>
+                        <span class="catalog__title">Палитра</span>
+                        <div class="catalog__box">
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                        </div>
+                        <span class="catalog__title">Вентиляционные решетки</span>
+                        <div class="catalog__box">
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                        </div>
+                        <span class="catalog__title">Брелки автомобильные</span>
+                        <div class="catalog__box">
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                        </div>
+                        <span class="catalog__title">Игрушки ростовые</span>
+                        <div class="catalog__box">
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                        </div>
+                        <span class="catalog__title">Открытки "деревянные"</span>
+                        <div class="catalog__box">
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                            <a href="#">Lorem ipsum.</a>
+                        </div>
+                    </div>
+                    <a href="#">Организаторам СП</a>
+                    <a href="#">Блог</a>
+                </div>
+            <div class="sidebar__slider swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="sidebar__slide swiper-slide">
+                        <img src="images/sidebar/slider-img-1.png" alt="">
+                        <span>ХОРОШИЕ новости</span>
+                        <p>Подпишитесь на рассылку и будьте в курсе новых акций и скидок</p>
+                        <a href="#" class="btn callSubscribe" data-popupBlock="callSubscribe">подписаться</a>
+                    </div>
+                    <div class="sidebar__slide swiper-slide">
+                        <img src="images/sidebar/slider-img-1.png" alt="">
+                        <span>ХОРОШИЕ новости</span>
+                        <p>Подпишитесь на рассылку и будьте в курсе новых акций и скидок</p>
+                        <a href="#" class="btn callSubscribe" data-popupBlock="callSubscribe">подписаться</a>
+                    </div>
+                    <div class="sidebar__slide swiper-slide">
+                        <img src="images/sidebar/slider-img-1.png" alt="">
+                        <span>ХОРОШИЕ новости</span>
+                        <p>Подпишитесь на рассылку и будьте в курсе новых акций и скидок</p>
+                        <a href="#" class="btn callSubscribe" data-popupBlock="callSubscribe">подписаться</a>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="main__right content">
+            <div class="content__top">
+                <ul class="breadcrumbs">
+                    <li><a href="#">Главная</a></li>
+                    <li>Поиск</li>
+                </ul>
+                <div class="sortby">
+                    <div>
+                        <span>Сортировать по</span>
+                        <select class="nice-select">
+                            <option value="">дате</option>
+                            <option value="">названию</option>
+                            <option value="">рейтингу</option>
+                            <option value="">цене ↑</option>
+                            <option value="">цене ↓</option>
+                        </select>
+                    </div>
+                    <div>
+                        <span>Показать по</span>
+                        <select class="nice-select">
+                            <option value="">16</option>
+                            <option value="">32</option>
+                            <option value="">64</option>
+                            <option value="">128</option>
+                            <option value="">256</option>
+                            <option value="">512</option>
+                        </select>
+                    </div>
+                </div>
+                <h1>Рельтат по запросу: Домик</h1>
+            </div>
+            <div class="goods goods--triple">
+                <div class="goods__item">
+                    <img src="images/ico/new.png" alt="" class="goods__new">
+                    <a href="#" class="goods__image">
+                        <img src="images/goods/item-2.png" alt="">
+                    </a>
+                    <span class="goods__art">Артикул:КД-0000029</span>
+                    <p class="goods__name">Кукольный домик открытого типа</p>
+                    <div class="goods__price--old">1200.00</div>
+                    <div class="goods__price">800.00</div>
+                    <div class="quantity">
+                        <div class="quantity__btn quantity__btn--minus">-</div>
+                        <input class="quantity__number" type="text" value="1">
+                        <div class="quantity__btn quantity__btn--plus">+</div>
+                    </div>
+                    <div class="goods__bottom">
+                        <a href="#" class="goods__addcart"><img src="images/ico/add-cart.png" alt=""></a>
+                        <a href="#" class="btn">индивидуалный заказ</a>
+                    </div>
+                </div>
+                <div class="goods__item">
+                    <img src="images/ico/new.png" alt="" class="goods__new">
+                    <a href="#" class="goods__image">
+                        <img src="images/goods/item-3.png" alt="">
+                    </a>
+                    <span class="goods__art">Артикул:КД-0000029</span>
+                    <p class="goods__name">Кукольный домик открытого типа</p>
+                    <div class="goods__price--old">1200.00</div>
+                    <div class="goods__price">800.00</div>
+                    <div class="quantity">
+                        <div class="quantity__btn quantity__btn--minus">-</div>
+                        <input class="quantity__number" type="text" value="1">
+                        <div class="quantity__btn quantity__btn--plus">+</div>
+                    </div>
+                    <div class="goods__bottom">
+                        <a href="#" class="goods__addcart"><img src="images/ico/add-cart.png" alt=""></a>
+                        <a href="#" class="btn">индивидуалный заказ</a>
+                    </div>
+                </div>
+                <div class="goods__item">
+                    <img src="images/ico/new.png" alt="" class="goods__new">
+                    <a href="#" class="goods__image">
+                        <img src="images/goods/item-4.png" alt="">
+                    </a>
+                    <span class="goods__art">Артикул:КД-0000029</span>
+                    <p class="goods__name">Кукольный домик открытого типа</p>
+                    <div class="goods__price">800.00</div>
+                    <div class="quantity">
+                        <div class="quantity__btn quantity__btn--minus">-</div>
+                        <input class="quantity__number" type="text" value="1">
+                        <div class="quantity__btn quantity__btn--plus">+</div>
+                    </div>
+                    <div class="goods__bottom">
+                        <a href="#" class="goods__addcart"><img src="images/ico/add-cart.png" alt=""></a>
+                        <a href="#" class="btn">индивидуалный заказ</a>
+                    </div>
+                </div>
+                <div class="goods__item">
+                    <img src="images/ico/new.png" alt="" class="goods__new">
+                    <a href="#" class="goods__image">
+                        <img src="images/goods/item-2.png" alt="">
+                    </a>
+                    <span class="goods__art">Артикул:КД-0000029</span>
+                    <p class="goods__name">Кукольный домик открытого типа</p>
+                    <div class="goods__price">800.00</div>
+                    <div class="quantity">
+                        <div class="quantity__btn quantity__btn--minus">-</div>
+                        <input class="quantity__number" type="text" value="1">
+                        <div class="quantity__btn quantity__btn--plus">+</div>
+                    </div>
+                    <div class="goods__bottom">
+                        <a href="#" class="goods__addcart"><img src="images/ico/add-cart.png" alt=""></a>
+                        <a href="#" class="btn">индивидуалный заказ</a>
+                    </div>
+                </div>
+                <div class="goods__item">
+                    <img src="images/ico/new.png" alt="" class="goods__new">
+                    <a href="#" class="goods__image">
+                        <img src="images/goods/item-3.png" alt="">
+                    </a>
+                    <span class="goods__art">Артикул:КД-0000029</span>
+                    <p class="goods__name">Кукольный домик открытого типа</p>
+                    <div class="goods__price">800.00</div>
+                    <div class="quantity">
+                        <div class="quantity__btn quantity__btn--minus">-</div>
+                        <input class="quantity__number" type="text" value="1">
+                        <div class="quantity__btn quantity__btn--plus">+</div>
+                    </div>
+                    <div class="goods__bottom">
+                        <a href="#" class="goods__addcart"><img src="images/ico/add-cart.png" alt=""></a>
+                        <a href="#" class="btn">индивидуалный заказ</a>
+                    </div>
+                </div>
+                <div class="goods__item">
+                    <img src="images/ico/new.png" alt="" class="goods__new">
+                    <a href="#" class="goods__image">
+                        <img src="images/goods/item-4.png" alt="">
+                    </a>
+                    <span class="goods__art">Артикул:КД-0000029</span>
+                    <p class="goods__name">Кукольный домик открытого типа</p>
+                    <div class="goods__price">800.00</div>
+                    <div class="quantity">
+                        <div class="quantity__btn quantity__btn--minus">-</div>
+                        <input class="quantity__number" type="text" value="1">
+                        <div class="quantity__btn quantity__btn--plus">+</div>
+                    </div>
+                    <div class="goods__bottom">
+                        <a href="#" class="goods__addcart"><img src="images/ico/add-cart.png" alt=""></a>
+                        <a href="#" class="btn">индивидуалный заказ</a>
+                    </div>
+                </div>
+            </div>
+            <div class="showmore">
+                <a href="#">
+                    <img src="images/ico/refresh.png" alt="">
+                    <span>Показать еще товары</span>
+                </a>
+            </div>
+        </div>
+        </main>
+        <footer class="footer">
+            <div class="b-center">
+                <div class="footer__col">
+                    <span class="footer__title">Меню</span>
+                    <ul>
+                        <li><a href="#">Каталог</a></li>
+                        <li><a href="#">Скидки</a></li>
+                        <li><a href="#">Оплата и доставка</a></li>
+                        <li><a href="#">Отзывы</a></li>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Вопросы</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <span class="footer__title">Контакты</span>
+                    <div class="footer__contact">
+                        <img src="images/ico/phone-receiver.png" alt="">
+                        <div>
+                            <span><a href="tel:89194918689">89194918689</a> - Александр</span>
+                            <span><a href="tel:89128825300">89128825300</a> - Сергей</span>
+                        </div>
+                    </div>
+                    <div class="footer__contact">
+                        <img src="images/ico/mail.png" alt="">
+                        <div>
+                            <span><a href="mailto:kotia-333@mail.ru">kotia-333@mail.ru</a></span>
+                            <span><a href="mailto:alengo3d@gmail.com">alengo3d@gmail.com</a></span>
+                            <span><a href="mailto:grey_275@mail.ru">grey_275@mail.ru</a></span>
+                        </div>
+                    </div>
+                    <div class="footer__contact">
+                        <img src="images/ico/placeholder.png" alt="">
+                        <div>
+                            <span>Производство - г.Пермь</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__col">
+                    <p>Будьте в курсе новостей первыми!</p>
+                    <a href="#" class="btn callSubscribe" data-popupBlock="callSubscribe">подписаться</a>
+                    <div class="social_links">
+                        <p>Мы в социальных сетях</p>
+                        <a href="#" class="social_links__item"><img src="images/ico/odnoklas.png" alt=""></a>
+                        <a href="#" class="social_links__item"><img src="images/ico/vk.png" alt=""></a>
+                        <a href="#" class="social_links__item"><img src="images/ico/instagram.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="b-center">
+                    <span>© 2005–2016 sitename.ru Все права защищены.</span>
+                    <span>Рожден в <a href="http://markello.ru/" target="_blank">Markello</a></span>
+                </div>
+            </div>
+        </footer>
+        
+        
+        <div id="overlay"></div>
+        <div class="popup callBack">
+            <div class="popup_close"><img src="images/ico/remove.png" alt=""></div>
+            <h3 class="callBack__title">Обратный звонок</h3>
+            <form action="">
+                <input type="text" placeholder="Ваше имя">
+                <input type="tel" placeholder="Ваш телефон">
+                <input type="email" placeholder="Ваш email">
+                <button type="submit" class="btn">Отправить</button>
+            </form>
+        </div>
+    <script src="_trg.js"></script>
+    </body>
+</html>

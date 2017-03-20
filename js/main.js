@@ -24,6 +24,24 @@ $(function() {
         }, 700);
     });
 
+    //Вызов быстрого поиска
+    $('.header__search input').on('input keyup focusout focusin', function(event) {
+        if ($(this).val().length >= 3) {
+            $('.fast_search').addClass('visible');
+        } else {
+            $('.fast_search').removeClass('visible');
+        }
+    });
+
+    //Закрыть быстрый поиск при клике вне его
+    $(document).on('click touchstart', function(event) {
+        if (!$(event.target).closest('.header__search').length) {
+            if ($('.fast_search').hasClass('visible')) {
+                $('.fast_search').removeClass('visible');
+            };
+        };
+    });
+
     // показать/скрыть .hamb_aside
     function hambVisible() {
         if ($(window).scrollTop() > $('.main').offset().top) {
