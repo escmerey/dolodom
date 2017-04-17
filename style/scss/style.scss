@@ -385,9 +385,9 @@ input, textarea, button {
     z-index: 5;
     top: 100%;
     right: 0;
+    display: none;
     box-sizing: border-box;
     width: 600px;
-    display: none;
     padding: 20px;
     border: 1px solid #eeeeee;
     background-color: #ffffff;
@@ -398,7 +398,7 @@ input, textarea, button {
         width: 300px;
         padding: 20px 10px;
     }
-    &.visible{
+    &.visible {
         display: block;
     }
     &__row {
@@ -694,11 +694,11 @@ input, textarea, button {
         }
         @media screen and (max-width: 998px) {
             width: 53%;
-            margin: 20px 0 0 0;
+            margin: 0 0 0 0;
         }
         input {
             box-sizing: border-box;
-            width: 136px;
+            width: 210px;
             height: 34px;
             padding: 0 32px 0 15px;
             font-size: 10px;
@@ -723,7 +723,7 @@ input, textarea, button {
     &__links {
         display: flex;
         @media screen and (max-width: 998px) {
-            margin: 20px 0 0 auto;
+            margin: 0 0 0 auto;
         }
         &_item {
             position: relative;
@@ -2607,5 +2607,114 @@ input, textarea, button {
         height: 48px;
         font-size: 11px;
         line-height: 48px;
+    }
+}
+
+.static-page {
+    &--full {
+        width: 100% !important;
+    }
+    h1, h2, h3, h4, h5 {
+        margin-bottom: 20px;
+        font-weight: 500;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    h2 {
+        margin: 20px 0 15px;
+        font-size: 18px;
+    }
+    h3 {
+        font-size: 16px;
+        font-weight: 700;
+        color: #000000;
+    }
+    p {
+        margin-bottom: 15px;
+        line-height: 18px;
+    }
+    img {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+    ul {
+        margin: 20px 0 25px 0;
+        li {
+            display: flex;
+            margin-bottom: 20px;
+            &:before {
+                position: relative;
+                top: 5px;
+                width: 6px;
+                height: 6px;
+                margin-right: 15px;
+                content: '';
+                border-radius: 50%;
+
+                flex-shrink: 0;
+            }
+        }
+    }
+    ol {
+        margin: 20px 0 25px 0;
+        counter-reset: item;
+        li {
+            display: flex;
+            margin-bottom: 20px;
+            &:before {
+                position: relative;
+                margin-right: 10px;
+                content: counter(item) '.';
+                counter-increment: item;
+                font-weight: 500;
+
+                flex-shrink: 0;
+            }
+        }
+    }
+    b, strong {
+        font-weight: 700 !important;
+    }
+    em, i {
+        font-style: italic !important;
+    }
+    s, strike {
+        text-decoration: line-through !important;
+    }
+    u {
+        text-decoration: underline !important;
+    }
+    a {
+        text-decoration: underline;
+        color: #000000;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.news-list {
+    .news {
+        margin: 0 0 25px;
+        h3 {
+            a {
+                font-size: 24px;
+                font-weight: 700;
+                color: #000000;
+            }
+        }
+    }
+    .date-news {
+        margin: 5px 0 10px;
+        color: #848484;
+    }
+    .more {
+        margin-left: 10px;
+        text-decoration: underline;
+        color: #000000;
+        &:hover{
+            text-decoration: none;
+        }
     }
 }
